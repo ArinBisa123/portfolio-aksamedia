@@ -22,34 +22,41 @@ const EditProfile = () => {
   };
 
   return (
-    <div className="p-6 max-w-xl mx-auto">
-      <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block mb-1">Username</label>
-          <input
-            type="text"
-            className="w-full border-3 border-primary p-2 rounded"
-            value={newName}
-            onChange={(e) => setNewName(e.target.value)}
-          />
-        </div>
-        <div className="space-x-3">
-          <button
-            type="submit"
-            className="w-[100px] mb-2 bg-card p-2 rounded hover:font-bold"
-          >
-            Save
-          </button>
-          <button
-            type="button"
-            onClick={handleCancel}
-            className="w-[100px] mb-2 p-2 rounded hover:bg-[#d4a37373] hover:text-destructive"
-          >
-            Cancel
-          </button>
-        </div>
-      </form>
+    <div className="w-full min-h-screen px-4 py-8 flex justify-center items-start">
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-xl border-2 border-primary rounded p-6 space-y-6 shadow-md">
+        <h2 className="text-2xl font-bold text-center">Edit Profile</h2>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="flex flex-col space-y-2">
+            <label htmlFor="username" className="text-sm font-medium">
+              Username
+            </label>
+            <input
+              id="username"
+              type="text"
+              className="w-full border-2 border-primary p-2 rounded"
+              value={newName}
+              onChange={(e) => setNewName(e.target.value)}
+            />
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <button
+              type="submit"
+              className="w-full sm:w-[80px] md:w-[100px] bg-card p-2 rounded hover:font-bold transition"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              onClick={handleCancel}
+              className="w-full sm:w-[80px] md:w-[100px] p-2 rounded hover:bg-[#d4a37373] hover:text-destructive transition"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

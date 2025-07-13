@@ -42,26 +42,38 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-2">Book List</h2>
+    <div className="w-full min-h-screen px-4 py-8 sm:px-6 md:px-12 lg:px-20 bg-background text-foreground">
+      <div className="max-w-4xl mx-auto space-y-6">
+        <h2 className="text-2xl font-bold text-center sm:text-left">
+          Book List
+        </h2>
 
-      <SearchInput value={keyword} onChange={handleSearchChange} />
+        {/* Search */}
+        <SearchInput value={keyword} onChange={handleSearchChange} />
 
-      <ul className="space-y-2">
-        {paginatedBooks.length > 0 ? (
-          paginatedBooks.map((book) => <BookCard key={book.id} book={book} />)
-        ) : (
-          <li className="text-primary-foreground">
-            Tidak ada buku yang ditemukan.
-          </li>
-        )}
-      </ul>
+        {/* Book Cards */}
+        <ul className="space-y-4">
+          {paginatedBooks.length > 0 ? (
+            paginatedBooks.map((book) => <BookCard key={book.id} book={book} />)
+          ) : (
+            <li className="text-center text-sm text-muted-foreground">
+              Tidak ada buku yang ditemukan.
+            </li>
+          )}
+        </ul>
 
-      <Pagination
-        totalPages={totalPages}
-        currentPage={page}
-        onPageChange={handlePageChange}
-      />
+        {/* Pagination */}
+        <Pagination
+          totalPages={totalPages}
+          currentPage={page}
+          onPageChange={handlePageChange}
+        />
+
+        {/* Footer */}
+        <div className="pt-6 text-sm text-center text-muted-foreground border-t">
+          Copyright &copy; Arin 2025
+        </div>
+      </div>
     </div>
   );
 };

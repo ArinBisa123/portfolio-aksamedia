@@ -9,35 +9,9 @@ const NoPage = () => {
               <div className="page-description">
                 The page you were looking for could not be found.
               </div>
-              {/* <div className="page-search">
-                <form>
-                  <div className="form-group floating-addon floating-addon-not-append">
-                    <div className="input-group">
-                      <div className="input-group-prepend">
-                        <div className="input-group-text">
-                          <i className="fas fa-search"></i>
-                        </div>
-                      </div>
-                      <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Search"
-                      />
-                      <div className="input-group-append">
-                        <button className="btn btn-primary btn-lg">
-                          Search
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-                <div className="mt-3">
-                  <a href="index.html">Back to Home</a>
-                </div>
-              </div> */}
             </div>
           </div>
-          <div className="simple-footer mt-5">Copyright &copy; Arin 2025</div>
+          <div className="mt-5">Copyright &copy; Arin 2025</div>
         </div>
       </section>
     </div>

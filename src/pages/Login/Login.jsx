@@ -28,44 +28,52 @@ const Login = () => {
   return (
     <>
       {error && alert(error)}
-      <div className="flex flex-col justify-center items-center w-full h-screen space-y-4">
-        <div className="w-1/2 border-primary border-4  rounded space-y-4 ">
-          <div className="flex flex-col items-center ">
-            <h1 className="text-4xl font-bold">Hello</h1>
-            <p>Login first to start looking for book</p>
+      <div className="flex flex-col justify-center items-center w-full min-h-screen px-4">
+        <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl border-primary border-4 rounded p-6 space-y-6 ">
+          <div className="text-center">
+            <h1 className="text-3xl md:text-4xl font-bold">Hello</h1>
+            <p className="text-sm md:text-base mt-2">
+              Login first to start looking for books
+            </p>
           </div>
-          <form
-            onSubmit={handleLogin}
-            className="flex flex-col items-center space-y-6"
-          >
+
+          <form onSubmit={handleLogin} className="flex flex-col space-y-6">
             <div className="flex flex-col space-y-2">
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username" className="text-sm font-medium">
+                Username
+              </label>
               <input
                 type="text"
                 id="username"
-                className="border border-gray-300 rounded p-2 w-full"
+                className="border-primary border-2 rounded p-2 w-full"
                 placeholder="Enter your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
+
             <div className="flex flex-col space-y-2">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="text-sm font-medium">
+                Password
+              </label>
               <input
                 type="password"
                 id="password"
-                className="border border-gray-300 rounded p-2"
+                className="border-primary border-2 rounded p-2 w-full"
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button
-              type="submit"
-              className="w-[100px] mb-2 bg-[#d4a373] p-2 rounded hover:bg-[#d4a37373]"
-            >
-              Submit
-            </button>
+
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="w-[100px] bg-card p-2 rounded hover:bg-[#d4a37373] transition"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>
