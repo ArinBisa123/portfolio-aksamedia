@@ -1,0 +1,73 @@
+const books = [
+  {
+    id: 1,
+    title: "Laskar Pelangi",
+    author: "Andrea Hirata",
+    year: 2005,
+    genre: "Drama",
+  },
+  {
+    id: 2,
+    title: "Bumi",
+    author: "Tere Liye",
+    year: 2014,
+    genre: "Fantasi",
+  },
+  {
+    id: 3,
+    title: "Negeri 5 Menara",
+    author: "Ahmad Fuadi",
+    year: 2009,
+    genre: "Inspirasi",
+  },
+  {
+    id: 4,
+    title: "Dilan 1990",
+    author: "Pidi Baiq",
+    year: 2014,
+    genre: "Romantis",
+  },
+  {
+    id: 5,
+    title: "Ayat-Ayat Cinta",
+    author: "Habiburrahman El Shirazy",
+    year: 2004,
+    genre: "Religi",
+  },
+  {
+    id: 6,
+    title: "Perahu Kertas",
+    author: "Dewi Lestari",
+    year: 2009,
+    genre: "Drama",
+  },
+  {
+    id: 7,
+    title: "Pulang",
+    author: "Tere Liye",
+    year: 2015,
+    genre: "Petualangan",
+  },
+  {
+    id: 8,
+    title: "Cantik Itu Luka",
+    author: "Eka Kurniawan",
+    year: 2002,
+    genre: "Sastra",
+  },
+  {
+    id: 9,
+    title: "Ronggeng Dukuh Paruk",
+    author: "Ahmad Tohari",
+    year: 1982,
+    genre: "Sastra",
+  },
+  {
+    id: 10,
+    title: "Supernova",
+    author: "Dewi Lestari",
+    year: 2001,
+    genre: "Fiksi Ilmiah",
+  },
+];
+export default books;
